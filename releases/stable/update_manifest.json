@@ -5,7 +5,7 @@
     "notes":  "Nova Assistant release 0.9.0",
     "package":  {
                     "url":  "https://github.com/arcanuum/nova/releases/download/v0.9.0/NovaAssistant-portable.zip",
-                    "sha256":  "d7d2d2986c34fb5ca6bc637d484dfaaa9298da94871bc107002a5d8af0a045d1",
-                    "size":  88407756
+                    "sha256":  "3e205e5255c380842eae8bfa5c9ece853ec29087eb3f7abe1e410c0e7d2b9ac6",
+                    "size":  88408581
                 }
 }
