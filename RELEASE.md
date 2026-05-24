@@ -36,6 +36,36 @@ and rebuilds `NovaSetupOnline.exe` with the raw GitHub manifest URL.
 - Portable package: `https://github.com/arcanuum/nova/releases/download/v0.9.1/NovaAssistant-portable.zip`
 - Update manifest: `https://raw.githubusercontent.com/arcanuum/nova/main/releases/stable/update_manifest.json`
 
+## Code Signing
+
+Install the Windows SDK so `signtool.exe` is available. For production, use a trusted code-signing certificate or Microsoft Azure Artifact Signing. A self-signed certificate is useful only for local tests and will not remove SmartScreen warnings for other users.
+
+Typical PFX signing command:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\sign_windows_release.ps1 -PfxPath C:\certs\nova-code-signing.pfx
+```
+
+Certificate from the Windows certificate store:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\sign_windows_release.ps1 -CertificateThumbprint YOUR_CERT_THUMBPRINT
+```
+
+Verify only:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\sign_windows_release.ps1 -VerifyOnly
+```
+
+Recommended release order with signing:
+
+1. Build `dist\NovaAssistant\NovaAssistant.exe`.
+2. Sign `dist\NovaAssistant\NovaAssistant.exe`.
+3. Rebuild the portable ZIP and manifest from the signed `dist` folder.
+4. Build and sign `outputs\installer\NovaSetupOnline.exe`.
+5. Publish the signed assets and updated manifest.
+
 ## Prod Checklist
 
 ```powershell
