@@ -1,11 +1,11 @@
 {
-    "version":  "0.9.1",
-    "channel":  "stable",
-    "mandatory":  false,
-    "notes":  "Nova 0.9.1: С†РµРЅС‚СЂ СЃРѕР±С‹С‚РёР№, РѕР±СѓС‡РµРЅРёРµ РєРѕРјР°РЅРґ, РіРѕР»РѕСЃРѕРІР°СЏ СѓРІРµСЂРµРЅРЅРѕСЃС‚СЊ, fallback-СЃС†РµРЅР°СЂРёРё, СѓР»СѓС‡С€РµРЅРЅС‹Р№ РјР°СЃС‚РµСЂ РїРµСЂРІРѕРіРѕ Р·Р°РїСѓСЃРєР° Рё РѕР±РЅРѕРІР»РµРЅРЅС‹Р№ РіРѕР»РѕСЃРѕРІРѕР№ HUD.",
-    "package":  {
-                    "url":  "https://github.com/arcanuum/nova/releases/download/v0.9.1/NovaAssistant-portable.zip",
-                    "sha256":  "b4e54f64f67c75d46824f9e4646bf6c0833fb8faeac033549b8e185add59ad7e",
-                    "size":  89894388
-                }
+  "version": "0.9.1",
+  "channel": "stable",
+  "mandatory": false,
+  "notes": "Nova 0.9.1: event center, command teaching, voice confidence, fallback actions, improved onboarding, and updated voice HUD.",
+  "package": {
+    "url": "https://github.com/arcanuum/nova/releases/download/v0.9.1/NovaAssistant-portable.zip",
+    "sha256": "b4e54f64f67c75d46824f9e4646bf6c0833fb8faeac033549b8e185add59ad7e",
+    "size": 89894388
+  }
 }
