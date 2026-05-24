@@ -66,6 +66,18 @@ Recommended release order with signing:
 4. Build and sign `outputs\installer\NovaSetupOnline.exe`.
 5. Publish the signed assets and updated manifest.
 
+Signed publish with a PFX certificate:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\publish_github_release_prompt.ps1 -Version 0.9.1 -SigningPfxPath C:\certs\nova-code-signing.pfx
+```
+
+Signed publish with a certificate thumbprint:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\publish_github_release_prompt.ps1 -Version 0.9.1 -SigningCertificateThumbprint YOUR_CERT_THUMBPRINT
+```
+
 ## Prod Checklist
 
 ```powershell
